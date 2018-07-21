@@ -6,10 +6,6 @@ class QuizQuestion extends Component {
 			<main>
 			<section>
 			<p>{this.props.quiz_question.instruction_text}</p>
-			<ul>
-				<li>{this.props.quiz_question.answer_options[0]}</li>
-			</ul>
-
 			</section>
 			<section className = "Buttons">
 			<ul>
