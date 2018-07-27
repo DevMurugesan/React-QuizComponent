@@ -9,13 +9,15 @@ constructor(props){
 	this.state = {quiz_position: 1 }
 }
 render(){
-	return (
-		
-		<div>
-		<QuizQuestion quiz_question={quizData.quiz_questions[this.state.quiz_position - 1]}/>
-		<QuizEnd/>
-		</div>
+	//const isQuizEnd = quiz_position-1 == quizData.quiz_questions.length?true:false;
+	const isQuizEnd = false;
+	if(isQuizEnd == false){
+		return (
+ 			<QuizQuestion quiz_question={quizData.quiz_questions[this.state.quiz_position - 1]}/>
 		)
+	}else{
+		return (<QuizEnd />);
+	}
 }
 }
 export default Quiz
