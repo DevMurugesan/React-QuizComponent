@@ -9,8 +9,8 @@ constructor(props){
 	this.state = {quiz_position: 1 }
 }
 render(){
-	//const isQuizEnd = quiz_position-1 == quizData.quiz_questions.length?true:false;
-	const isQuizEnd = false;
+	const isQuizEnd = this.quiz_position-1 == quizData.quiz_questions.length?true:false;
+	//const isQuizEnd = false;
 	if(isQuizEnd == false){
 		return (
  			<QuizQuestion quiz_question={quizData.quiz_questions[this.state.quiz_position - 1]}/>
