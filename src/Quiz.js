@@ -15,7 +15,7 @@ render(){
 		return (
  			<QuizQuestion quiz_question={quizData.quiz_questions[this.state.quiz_position - 1]}/>
 		)
-	}else{
+	}if(isQuizEnd == true){
 		return (<QuizEnd />);
 	}
 }
